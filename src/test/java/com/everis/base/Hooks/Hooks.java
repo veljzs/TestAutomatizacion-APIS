@@ -1,7 +1,9 @@
 package com.everis.base.Hooks;
 
-import com.everis.base.NetflixService;
+
 import io.cucumber.java.BeforeStep;
+import net.serenitybdd.screenplay.actors.OnStage;
+import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class Hooks {
     private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(Hooks.class);
@@ -10,5 +12,7 @@ public class Hooks {
     @BeforeStep
     public void beforeStep(){ //
         LOGGER.info( "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        // Configurar el escenario con un elenco de actores
+        OnStage.setTheStage(new OnlineCast());
     }
 }

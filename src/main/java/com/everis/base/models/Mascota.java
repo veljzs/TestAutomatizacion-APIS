@@ -2,17 +2,15 @@ package com.everis.base.models;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import java.util.List;
 
-@JsonPropertyOrder({"id", "category", "name", "photoUrls", "tags"})
+@JsonPropertyOrder({"id", "petId", "quantity", "shipDate", "status", "complete"})
 public class Mascota {
     private int id;
-    private Categoria category;
-    private String name;
-    private String[] photoUrls;
-    private Tag[] tags;
+    private int petId;
+    private int quantity;
+    private String shipDate;
     private String status;
-    //private List<Tag> tags;
+    private boolean complete;
 
 
     public int getId() {
@@ -23,36 +21,29 @@ public class Mascota {
         this.id = id;
     }
 
-    public Categoria getCategory() {
-        return category;
+    public int getPetId() {
+        return petId;
     }
 
-    public void setCategory(Categoria category) {
-        this.category = category;
+    public void setPetId(int petId) {
+        this.petId = petId;
     }
 
-    public String getName() {
-        return name;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
-    public String[] getPhotoUrls() {
-        return photoUrls;
+
+    public String getShipDate() {
+        return shipDate;
     }
 
-    public void setPhotoUrls(String[] photoUrls) {
-        this.photoUrls = photoUrls;
-    }
-
-    public Tag[] getTags() {
-        return tags;
-    }
-
-    public void setTags(Tag[] tags) {
-        this.tags = tags;
+    public void setShipDate(String shipDate) {
+        this.shipDate = shipDate;
     }
 
     public String getStatus() {
@@ -62,5 +53,14 @@ public class Mascota {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    public boolean getComplete() {
+        return complete;
+    }
+
+    public void setComplete(boolean complete) {
+        this.complete = complete;
+    }
+
 }
 
