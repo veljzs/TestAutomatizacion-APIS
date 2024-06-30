@@ -31,7 +31,7 @@ public class MascotaStepDef {
         mascota.validarBodyResponse(key, expextedValue);
     }
 
-    @When("consulto la mascota de ID {int}")
+    @When("consulto la orden de mascota de ID {int}")
     public void consultoLaMascotaDeID(int arg0) {
         mascota.consultaMascota(arg0);
     }

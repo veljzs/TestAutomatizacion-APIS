@@ -15,9 +15,9 @@ Feature: Servivio de Store de PetStore
 
 
   @Scenario2
-  Scenario Outline: Consulta Mascota
+  Scenario Outline: Consulta una orden de Mascota
     Given Estoy en la tienda
-    When consulto la mascota de ID <ID>
+    When consulto la orden de mascota de ID <ID>
     Then valido el codigo de respuesta sea 200
     And valido el body del response de consulta tiene "id" con valor <ID>
     Examples:

@@ -47,7 +47,7 @@ public class MascotaStep {
 
 
 
-    @Step("consultar la mascota de ID")
+    @Step("consulto la orden de mascota de ID")
     public void consultaMascota(int id) {
         Mascota mascota =
                 given()
